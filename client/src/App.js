@@ -23,10 +23,11 @@ class App extends Component {
 
     render() {
         // console.log(this.state.data);
-        const dataMapping = this.state.data.map((eachElement)=>{
-            return(<div>
+        const dataMapping = this.state.data.map((eachElement, index)=>{
+            return(<div key={index}>
                 <p>{eachElement.name}</p>
                 <p>{eachElement.address}</p>
+                <hr/>
             </div>)
         });
     return (
